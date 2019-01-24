@@ -11,6 +11,23 @@
               
             </div>
             <div class="col-md-6 col-md-offset-6">
+                <form action="" method="post" class="form-horizontal">
+                    {{ csrf_field() }}
+
+                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">First Name</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                </form>
                <form style="border: 2px solid  background-color:#000000" method="post" action="submitpage.js">
                   <div>
                     <label>My Profile</label><br>
