@@ -3,14 +3,12 @@
 @section('content')
 <div class="container" style="background-color: rgb(149, 152, 157);">
     <div class="row">
-        <div class="">
+        <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>    
             </div>
-            <div class="col-md-8 col-md-offset-2">
-              
-            </div>
-            <div class="col-md-6 col-md-offset-6">
+
+            <div class="panel-body">
                 <form action="" method="post" class="form-horizontal">
                     {{ csrf_field() }}
 
@@ -27,16 +25,39 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="l_name" class="col-md-4 control-label">Last Name</label>
+
+                            <div class="col-md-6">
+                                <input id="l_name" type="text" class="form-control" name="l_name" value="{{ old('l_name') }}">
+
+                                @if ($errors->has('l_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('l_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('text') ? ' has-error' : '' }}">
+                            <label for="title" class="col-md-4 control-label">Title</label>
+
+                            <div class="col-md-6">
+                                <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}">
+
+                                @if ($errors->has('title'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('title') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                 </form>
+
                <form style="border: 2px solid  background-color:#000000" method="post" action="submitpage.js">
                   <div>
-                    <label>My Profile</label><br>
-                    First Name:
-                    <input type="text" name="first_name"><br>
-                    Last Name:
-                    <input type="text" name="last_name"><br>
-                    Title:
-                    <input type="text" name="Title"><br>
+                    
                     City:
                     <input type="text" name="city"><br>
                     Country:
