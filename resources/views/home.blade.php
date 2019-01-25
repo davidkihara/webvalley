@@ -3,12 +3,14 @@
 @section('content')
 <div class="container" style="background-color: rgb(149, 152, 157);">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>    
             </div>
-
-            <div class="panel-body">
+            <div class="col-md-8 col-md-offset-2">
+              
+            </div>
+            <div class="col-md-6 col-md-offset-6">
                 <form action="" method="post" class="form-horizontal">
                     {{ csrf_field() }}
 
@@ -25,6 +27,25 @@
                                 @endif
                             </div>
                         </div>
+                </form>
+               <form style="border: 2px solid  background-color:#000000" method="post" action="submitpage.js">
+                  <div>
+                    <label>My Profile</label><br>
+                    First Name:
+                    <input type="text" name="first_name"><br>
+                    Last Name:
+                    <input type="text" name="last_name"><br>
+                    Title:
+                    <input type="text" name="Title"><br>
+                    City:
+                    <input type="text" name="city"><br>
+                    Country:
+                    <input type="text" name="country"><br>
+                    Language:
+                    <input type="text" name="language"><br>
+                    Short Bio:
+                    <textarea></textarea>
+                  </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="l_name" class="col-md-4 control-label">Last Name</label>
