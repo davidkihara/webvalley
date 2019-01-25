@@ -10,7 +10,7 @@
             <div class="col-md-8 col-md-offset-2">
               
             </div>
-            <div class="col-md-6 col-md-offset-6">
+            <div class="col-md-6 col-md-offset-3">
                 <form action="" method="post" class="form-horizontal">
                     {{ csrf_field() }}
 
@@ -26,51 +26,184 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
-                </form>
-               <form style="border: 2px solid  background-color:#000000" method="post" action="submitpage.js">
-                  <div>
-                    <label>My Profile</label><br>
-                    First Name:
-                    <input type="text" name="first_name"><br>
-                    Last Name:
-                    <input type="text" name="last_name"><br>
-                    Title:
-                    <input type="text" name="Title"><br>
-                    City:
-                    <input type="text" name="city"><br>
-                    Country:
-                    <input type="text" name="country"><br>
-                    Language:
-                    <input type="text" name="language"><br>
-                    Short Bio:
-                    <textarea></textarea>
-                  </div>
+                    </div>
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Lasst Name</label>
 
-                  <div>
-                    <label>Social Links</label><br>
-                    Your Website:<br>
-                    <input type="text" name="Your_Website"><br>
-                    Facebook Profile:<br>
-                    <input type="text" name="Facebook_Profile"><br>
-                    Twitter Profile:<br>
-                    <input type="text" name="Twitter_Profile"><br>
-                    LinkedIn Profile:<br>
-                    <input type="text" name="LinkedIn_Profile"><br>
-                  </div>
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
 
-                  <div>
-                    <label>Date of Birth</label><br>
-                    <input type="text" name="Date_of_Birth"><br>
-                  </div>
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
 
-                  <div>
-                    <label>Industry</label><br>
-                    <input type="text" name="Industry">
-                  </div>
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Title</label>
 
-                    <input type="submit" name="Save" value="Save">
-                    <input type="submit" name="Reset" value="Reset">
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">City</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Country</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Language</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Short Bio</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Your Website</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Facebook Profile</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Twitter Profile</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">LinkedIn Profile</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Date of Birth</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
+
+
+                                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="first_name" class="col-md-4 control-label">Industry</label>
+
+                            <div class="col-md-6">
+                                <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}">
+
+                                @if ($errors->has('f_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('f_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                    </div>
                 </form>
             </div>
         </div>
